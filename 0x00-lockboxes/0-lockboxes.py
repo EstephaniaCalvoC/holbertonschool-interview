@@ -31,6 +31,8 @@ def canUnlockAll(boxes):
             return False
 
         for key in current_box.keys:
+            if key >= n_boxes:
+                return False
             tuple_boxes[key] = tuple_boxes[key]._replace(unlock=True)
 
         if all(box.unlock for box in tuple_boxes):
