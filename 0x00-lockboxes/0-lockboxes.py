@@ -31,11 +31,11 @@ def canUnlockAll(boxes):
             return False
 
         for key in current_box.keys:
-            tuple_boxes[key] = tuple_boxes[key]._replace(unlock = True)
+            tuple_boxes[key] = tuple_boxes[key]._replace(unlock=True)
 
         if all(box.unlock for box in tuple_boxes):
             return True
 
-        tuple_boxes[idx] = current_box._replace(evaluated = True)
+        tuple_boxes[idx] = current_box._replace(evaluated=True)
 
     return False
