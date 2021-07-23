@@ -39,5 +39,3 @@ def canUnlockAll(boxes):
             return True
 
         tuple_boxes[idx] = current_box._replace(evaluated=True)
-
-    return False
